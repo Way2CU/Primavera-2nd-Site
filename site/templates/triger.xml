@@ -73,7 +73,9 @@
 							name="contact_form"
 							action="show"
 							text_id="contact_form"
-							/>
+							>
+						<transfer name="source" value="triger"/>
+						</cms:module>
 					</div>
 				</div>
 			</section>
