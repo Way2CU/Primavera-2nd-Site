@@ -1,0 +1,211 @@
+/**
+ * Content_Mobile Style Sheet
+ * Plus landing page
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+header {
+	display: block;
+	width: 100%;
+	position: fixed;
+	padding: 1em 0;
+	background-color: white;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+header a.logo {
+	display: block;
+	text-align: center;
+}
+
+header a.logo svg {
+	width: 100px;
+}
+
+header a.phone {
+	position: absolute;
+	left: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 1em;
+}
+
+header a.phone > svg {
+	width: 2em;
+	height: 2em;
+}
+
+/*
+ * Main section
+*/
+
+section.main {
+	padding-top: 85px;
+	text-align: center;
+}
+
+section.main div.middle {
+	background: url(../images/xagaris_mobile.jpg);
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	padding: 0 0.5em;
+}
+
+section.main div.middle h1 {
+	margin: 0;
+	color: @color_red;
+}
+
+section.main div.middle h2 {
+	color: @color_red;
+	margin: 0;
+	font-size: 1.3em;
+}
+
+section.main div.middle p {
+	font-weight: 700;
+}
+
+section.main div.middle svg {
+	width: 35%;
+	padding-bottom: 200px;
+}
+
+section.main div.middle svg:last-of-type .text-color {
+	fill: #5f5d5e
+}
+
+section div.left {
+	box-sizing: border-box;
+	padding: 0 0.5em;
+}
+
+section div.left div.contact {
+	display: block;
+	background-color: fade(white, 50%);
+	border: 2px solid @color_red;
+	border-radius: 10px;
+	text-align: center;
+	margin: 1em 0;
+}
+
+section div.left div.contact h4 {
+	margin: 0;
+	font-weight: 400;
+	padding: 1em 0;
+}
+
+section div.left div.contact a.phone {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	background-color: @color_red;
+	color: white;
+	margin-bottom: 1em;
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+section div.left div.contact a.phone svg {
+	width: 1.5em;
+	height: 1.5em;
+	padding-right: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section div.left div.contact a.phone svg .cls-1 {
+	fill: white;
+}
+
+
+#form_container {
+	border: 2px solid @color_red;
+	background-color: fade(white, 50%);
+	border-radius: 15px;
+}
+
+#form_container h3 {
+	margin: 0;
+	padding: 1em 0;
+	padding-bottom: 0.5em;
+	font-weight: 400;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#form_container h4 {
+	margin: 0;
+	color: @color_red;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#form_container form {
+	display: block;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+#form_container form label {
+	display: block;
+	width: 100%;
+	padding-bottom: 1em;
+	box-sizing: border-box;
+}
+
+#form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 15%;
+}
+
+#form_container form label input {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 1em 0.5em;
+	border: 1px solid grey;
+	width: 85%;
+	transition: all 0.3s;
+}
+
+#form_container form label input:focus {
+	border: 1px solid @color_red;
+}
+
+#form_container form div.controls {
+	text-align: center;
+}
+
+#form_container form div.controls button {
+	background-color: @color_red;
+	padding: 0.5em 1em;
+	color: white;
+	font-weight: 700;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	font-size: 1.5em;
+	transition: all 0.3s;
+}
+
+/*
+ * Section Quality
+*/
+section.quality {
+	padding: 1em 0.5em;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+section.quality img {
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+}
