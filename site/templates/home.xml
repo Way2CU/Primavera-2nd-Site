@@ -101,6 +101,13 @@
 				template="stock/article_generic.xml"
 				/>
 			</section>
+			<footer>
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>
