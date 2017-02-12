@@ -8,12 +8,31 @@
 		</head>
 
 		<body>
+			<!-- Mobile header -->
+			<cms:mobile>
+				<header>
+					<a href="#top" class="logo">
+					<cms:svg file="logo.svg" />
+					</a>
+
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:svg file="phone.svg"/>
+					</a>
+				</header>
+			</cms:mobile>
+
 			<section class="main">
 				<!-- Right div with logo and ttm emblem -->
-				<div class="right">
-					<cms:svg file="logo.svg" />
-					<cms:svg file="ttm.svg" />
-				</div>
+				<cms:desktop>
+					<div class="right">
+						<cms:svg file="logo.svg" />
+						<cms:svg file="ttm.svg" />
+					</div>
+				</cms:desktop>
 
 				<!-- Middle div with article and arrow svg -->
 				<div class="middle">
@@ -23,7 +42,14 @@
 						text_id="main"
 						template="parts/article_view.xml"
 						/>
-					<cms:svg file="arrow.svg" />
+
+					<cms:mobile>
+						<cms:svg file="ttm.svg" />
+					</cms:mobile>
+
+					<cms:desktop>
+						<cms:svg file="arrow.svg" />
+					</cms:desktop>
 				</div>
 
 				<!-- Left div with contact form and contact phone -->
