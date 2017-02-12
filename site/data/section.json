@@ -1,5 +1,5 @@
 {
 	"/": "home.xml",
-	"/plus/xagaris": "plus/xagaris.xml",
-	"/plus/triger": "plus/triger.xml"
+	"/xagaris": "xagaris.xml",
+	"/triger": "triger.xml"
 }
