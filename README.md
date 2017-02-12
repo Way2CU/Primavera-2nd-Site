@@ -1,6 +1,6 @@
-# Plus Landing page Xagaris
+# Plus Landing pages
 
-Plus Relief Products Landing Page Xagaris
+Plus Relief Products Landing Pages
 
 ## License
 

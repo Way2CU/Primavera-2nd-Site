@@ -26,11 +26,21 @@
 
 section.main {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
+	min-height: 645px;
+}
+
+section.main.xagaris {
 	background: url(../images/xagaris_desktop.jpg);
 	background-size: 1920px 645px;
 	background-position: center;
 	background-repeat: no-repeat;
-	min-height: 645px;
+}
+
+section.main.triger {
+	background: url(../images/triger_desktop.jpg);
+	background-size: 1920px 645px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 section div.right {
@@ -70,6 +80,10 @@ section div.middle h1 {
 section div.middle h2 {
 	margin: 0;
 	color: @color_red;
+}
+
+section div.middle.trigger h2 {
+	font-size: 1.5em;
 }
 
 section div.middle p {

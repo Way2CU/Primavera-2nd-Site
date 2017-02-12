@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Mobile header -->
+			<cms:mobile>
+				<header>
+					<a href="#top" class="logo">
+					<cms:svg file="logo.svg" />
+					</a>
+
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:svg file="phone.svg"/>
+					</a>
+				</header>
+			</cms:mobile>
+
+			<section class="main xagaris">
+				<!-- Right div with logo and ttm emblem -->
+				<cms:desktop>
+					<div class="right">
+						<cms:svg file="logo.svg" />
+						<cms:svg file="ttm.svg" />
+					</div>
+				</cms:desktop>
+
+				<!-- Middle div with article and arrow svg -->
+				<div class="middle xagaris">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="main_xagaris"
+						template="parts/article_view.xml"
+						/>
+
+					<cms:mobile>
+						<cms:svg file="ttm.svg" />
+					</cms:mobile>
+
+					<cms:desktop>
+						<cms:svg file="arrow.svg" />
+					</cms:desktop>
+				</div>
+
+				<!-- Left div with contact form and contact phone -->
+				<div class="left">
+					<div class="contact">
+						<h4><cms:text constant="contact_us" /></h4>
+						<a
+							href="'tel:'.urlencode(Language::get_Text('phone'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<cms:text constant="phone" />
+							<cms:svg file="phone.svg"/>
+						</a>
+					</div>
+
+					<div id="form_container">
+						<h3><cms:text constant="fill_form" /></h3>
+						<h4><cms:text constant="experts_line" /></h4>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
+					</div>
+				</div>
+			</section>
+
+			<section class="quality">
+			<!-- First image of quality logos -->
+			<img
+				src="_BASEURL.'/site/images/quality.jpg'"
+				alt="quality_logos"
+				cms:eval="src"
+				/>
+
+			<!-- Second image of quality logos -->
+			<img
+				src="_BASEURL.'/site/images/quality2.jpg'"
+				alt="quality_logos"
+				cms:eval="src"
+				/>
+
+			<!-- Quality article -->
+			<cms:module
+				name="articles"
+				action="show"
+				text_id="quality"
+				template="stock/article_generic.xml"
+				/>
+			</section>
+			<footer>
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
