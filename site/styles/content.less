@@ -15,6 +15,15 @@
 	}
 }
 
+@keyframes floating {
+	0% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}
+
 section.main {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	background: url(../images/xagaris_desktop.jpg);
@@ -76,6 +85,12 @@ section div.middle svg {
 	display: block;
 	margin-left: 0;
 	margin-right: auto;
+
+	animation-name: floating;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 section div.left {
