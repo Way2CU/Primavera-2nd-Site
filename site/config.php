@@ -24,7 +24,7 @@ $default_language = 'he';
 $session_type = Session::TYPE_BROWSER;
 
 // security
-$force_https = true;
+$force_https = false;
 
 // database
 $db_use = true;
