@@ -226,6 +226,10 @@ section.quality img {
 
 section.thanks {
 	padding: 0 0.5em;
+	background-image: url(../images/mobile_thanks.jpg);
+	background-position: center bottom;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 }
 
 section.thanks svg {
@@ -263,6 +267,11 @@ section.thanks svg {
 	display: block;
 	margin: 0 auto;
 	padding: 0.5em;
+	border: 1px solid grey;
+}
+
+#thank_you_form form label input:focus {
+	border: 1px solid @color_red;
 }
 
 #thank_you_form form div.controls {
