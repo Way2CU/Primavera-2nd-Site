@@ -51,6 +51,12 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	if (window.location.pathname != '/thank-you')
+		Caracal.ContactForm.list[0].events.connect('submit-success', function(data) {
+			window.location.pathname = '/thank-you';
+			return false;
+		})
 };
 
 
