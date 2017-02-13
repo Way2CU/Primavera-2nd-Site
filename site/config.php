@@ -17,11 +17,14 @@ define('DEBUG', 1);
 // define('SQL_DEBUG', 1);
 
 // site language configuration
-$available_languages = array('en','he');
+$available_languages = array('he');
 $default_language = 'he';
 
 // default session options
 $session_type = Session::TYPE_BROWSER;
+
+// security
+$force_https = true;
 
 // database
 $db_use = true;
