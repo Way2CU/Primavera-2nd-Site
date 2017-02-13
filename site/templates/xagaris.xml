@@ -3,8 +3,16 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
+<<<<<<< HEAD
 			<title><cms:text constant="site_title"/></title>
 			<cms:raw file="parts/gtmhead.txt"/>
+=======
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" "/>
+				<cms:text constant="title_xagaris"/>
+			</title>
+>>>>>>> b079143d47032e9f84960912ae467ad3f340627f
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
