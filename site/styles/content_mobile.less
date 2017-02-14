@@ -186,8 +186,73 @@ section div.left div.contact a.phone svg .cls-1 {
 	transition: all 0.3s;
 }
 
+#form_container form label:nth-of-type(2) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 60%;
+}
+
+#form_container form label:nth-of-type(3) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40%;
+}
+
+#form_container form label:nth-of-type(2) span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+#form_container form label:nth-of-type(2) input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 75%;
+}
+
+#form_container form label:nth-of-type(3) span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+#form_container form label:nth-of-type(3) select {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	height: 55px;
+	background-color: white;
+	transition: all 0.3s;
+	border: 1px solid grey;
+}
+
+#form_container form label:nth-of-type(3) select:hover {
+	border: 1px solid @color_red;
+}
+
 #form_container form label input:focus {
 	border: 1px solid @color_red;
+}
+
+#form_container form label.checkbox {
+	padding-right: 15%;
+}
+
+#form_container form label.checkbox input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	background-color: white;
+	border: 1px solid grey;
+}
+
+#form_container form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'100% - 30px');
+	text-align: initial;
 }
 
 #form_container form div.controls {
