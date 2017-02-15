@@ -15,7 +15,7 @@
 	}
 }
 
-@keyframes floating {
+@keyframes floating_rtl {
 	0% {
 		transform: translateY(-5px);
 	}
@@ -24,36 +24,48 @@
 	}
 }
 
+@keyframes floating {
+	0% {
+		transform: translateY(-5px) scaleX(-1);
+	}
+	100% {
+		transform: translateY(5px) scaleX(-1);
+	}
+}
+
 section.main {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	min-height: 645px;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-image: url(../images/triger_background_wide.jpg);
+	background-position: calc(~'(50% - 200px)') bottom;
 }
 
-section.main.xagaris {
-	background: url(../images/xagaris_desktop.jpg);
-	background-size: 1920px 645px;
-	background-position: center bottom;
-	background-repeat: no-repeat;
+html[dir=rtl] section.main {
+	background-image: url(../images/triger_background.jpg);
+	background-position: calc(~'(50% + 50px)') bottom;
 }
 
-section.main.triger {
-	background: url(../images/triger_desktop.jpg);
-	background-size: 1920px 645px;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-}
-
-section.main.relipso {
-	background: url(../images/relipso_background.jpg);
-	background-size: 1920px 645px;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-}
 
 section div.right {
 	display: inline-block;
 	vertical-align: top;
 	width: 15%;
+}
+
+section div.right div.language {
+	text-align: center;
+}
+
+section div.right div.language a {
+	text-decoration: none;
+	color: grey;
+	padding: 0 1em;
+}
+
+section div.right div.language a.active {
+	color: @color_red;
 }
 
 section div.right svg:first-of-type {
@@ -74,6 +86,11 @@ section div.middle {
 	width: 50%;
 	padding-right: 5%;
 	box-sizing: border-box;
+	padding-left: 1em;
+}
+
+html[dir=rtl] section div.middle {
+	padding-left: 0;
 }
 
 section div.middle h1 {
@@ -100,18 +117,24 @@ section div.middle p {
 	padding-top: 0.5em;
 }
 
+/* Arrow */
 section div.middle svg {
 	width: 150px;
 	height: 150px;
 	display: block;
-	margin-left: 0;
-	margin-right: auto;
+	margin-left: auto;
 
 	animation-name: floating;
 	animation-duration: 1s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+}
+
+html[dir=rtl] section div.middle svg {
+	margin-left: 0;
+	margin-right: auto;
+	animation-name: floating_rtl;
 }
 
 section div.left {
@@ -160,9 +183,13 @@ section div.left div.contact a.phone:hover {
 section div.left div.contact a.phone svg {
 	width: 1.5em;
 	height: 1.5em;
-	padding-right: 0.5em;
+	padding-left: 0.5em;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+html[dir=rtl] section div.left div.contact a.phone svg {
+	padding-right: 0.5em;
 }
 
 section div.left div.contact a.phone svg .cls-1 {
@@ -173,6 +200,8 @@ section div.left div.contact a.phone svg .cls-1 {
 	border: 2px solid @color_red;
 	background-color: fade(white, 50%);
 	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 1em;
 }
 
 
@@ -195,8 +224,7 @@ section div.left div.contact a.phone svg .cls-1 {
 
 #form_container form {
 	display: block;
-	box-sizing: border-box;
-	padding: 1em;
+	padding-top: 1em;
 }
 
 #form_container form label {
@@ -206,42 +234,49 @@ section div.left div.contact a.phone svg .cls-1 {
 	box-sizing: border-box;
 }
 
+#form_container form label span {
+	display: block;
+}
+
+#form_container form label input {
+	display: block;
+	box-sizing: border-box;
+	padding: 0.7em;
+	border: 1px solid grey;
+	width: 100%;
+	transition: all 0.3s;
+}
+
 #form_container form label:nth-of-type(2) {
 	display: inline-block;
 	vertical-align: middle;
-	width: 60%;
+	width: 70%;
+	margin-right: 10%;
+}
+
+html[dir=rtl] #form_container form label:nth-of-type(2) {
+	margin-right: 0;
+}
+
+html[dir=rtl] #form_container form label:nth-of-type(3) {
+	margin-right: 10%;
 }
 
 #form_container form label:nth-of-type(3) {
 	display: inline-block;
 	vertical-align: middle;
-	width: 40%;
-}
-
-#form_container form label:nth-of-type(2) span {
-	display: inline-block;
-	vertical-align: middle;
-	width: 25%;
+	width: 20%;
 }
 
 #form_container form label:nth-of-type(2) input {
-	display: inline-block;
-	vertical-align: middle;
-	width: 75%;
-}
-
-#form_container form label:nth-of-type(3) span {
-	display: inline-block;
-	vertical-align: middle;
-	width: 40%;
-	padding-right: 5%;
+	display: block;
+	width: 100%;
 }
 
 #form_container form label:nth-of-type(3) select {
-	display: inline-block;
-	vertical-align: middle;
-	width: 55%;
-	height: 55px;
+	display: block;
+	width: 100%;
+	height: 42px;
 	background-color: white;
 	transition: all 0.3s;
 	border: 1px solid grey;
@@ -249,26 +284,6 @@ section div.left div.contact a.phone svg .cls-1 {
 
 #form_container form label:nth-of-type(3) select:hover {
 	border: 1px solid @color_red;
-}
-
-#form_container form label span {
-	display: inline-block;
-	vertical-align: middle;
-	width: 15%;
-}
-
-#form_container form label input {
-	display: inline-block;
-	vertical-align: middle;
-	box-sizing: border-box;
-	padding: 1em 0.5em;
-	border: 1px solid grey;
-	width: 85%;
-	transition: all 0.3s;
-}
-
-#form_container form label.checkbox {
-	padding-right: 15%;
 }
 
 #form_container form label.checkbox input {
@@ -279,12 +294,13 @@ section div.left div.contact a.phone svg .cls-1 {
 	margin-left: 5px;
 	background-color: white;
 	border: 1px solid grey;
+	margin-right: 5px;
 }
 
 #form_container form label.checkbox span {
 	display: inline-block;
 	vertical-align: middle;
-	width: calc(~'100% - 30px');
+	width: calc(~'100% - 35px');
 }
 
 
