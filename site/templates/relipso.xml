@@ -36,6 +36,11 @@
 				<!-- Right div with logo and ttm emblem -->
 				<cms:desktop>
 					<div class="right">
+						<!-- Language menu -->
+						<div class="language">
+							<cms:module name="language_menu" action="print"/>
+						</div>
+
 						<cms:svg file="logo.svg" />
 						<cms:svg file="ttm.svg" />
 					</div>
