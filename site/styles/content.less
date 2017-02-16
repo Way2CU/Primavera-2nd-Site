@@ -38,13 +38,35 @@ section.main {
 	min-height: 645px;
 	background-color: white;
 	background-repeat: no-repeat;
-	background-image: url(../images/triger_background_wide.jpg);
 	background-position: calc(~'(50% - 200px)') bottom;
 }
 
 html[dir=rtl] section.main {
+	background-position: calc(~'(50% + 200px)') bottom;
+}
+
+section.main.xagaris {
+	background-image: url(../images/xagaris_background.jpg);
+}
+
+html[dir=rtl] section.main.xagaris {
+	background-image: url(../images/xagaris_background.jpg);
+}
+
+section.main.triger {
 	background-image: url(../images/triger_background.jpg);
-	background-position: calc(~'(50% + 50px)') bottom;
+}
+
+html[dir=rtl] section.main.triger {
+	background-image: url(../images/triger_background.jpg);
+}
+
+section.main.relipso {
+	background-image: url(../images/relipso_background.jpg);
+}
+
+html[dir=rtl] section.main.relipso {
+	background-image: url(../images/relipso_background.jpg);
 }
 
 section div.right {
