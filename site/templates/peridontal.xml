@@ -86,7 +86,7 @@
 							action="show"
 							text_id="contact_form"
 							>
-						<transfer name="source" value="aperta"/>
+						<transfer name="source" value="peridontal"/>
 						</cms:module>
 					</div>
 				</div>
