@@ -250,7 +250,6 @@ html[dir=rtl] #form_container h4 {
 	font-size: 2em;
 }
 
-
 #form_container form {
 	display: block;
 	padding-top: 1em;
@@ -261,27 +260,35 @@ html[dir=rtl] #form_container h4 {
 	border: none;
 	padding: 0;
 	margin: 0;
+	direction: ltr;
 }
 
-#form_container form fieldset label:first-of-type {
-	width: 70%;
+html[dir=rtl] #form_container form fieldset {
+	direction: rtl;
+}
+
+#form_container form fieldset[name="phone_predfix"] label:first-of-type {
+	width: 20%;
+	margin-right: 10%;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 10%;
 
 	html[dir=rtl] & {
-		margin-left: 10%;
 		margin-right: 0;
+		margin-left: 10%;
 	}
 }
 
-#form_container form fieldset label:last-of-type {
-	width: 20%;
+#form_container form fieldset[name="phone_predfix"] label:last-of-type {
+	width: 70%;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#form_container form fieldset label select {
+#form_container form fieldset[name="phone_predfix"] select {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
 	width: 100%;
 	background-color: white;
 	height: 42px;
