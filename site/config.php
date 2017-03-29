@@ -21,13 +21,12 @@ $available_languages = array('he', 'ru');
 $default_language = 'he';
 
 // default session options
-$session_type = Session::TYPE_BROWSER;
+$session_type = SessionType::BROWSER;
 
 // security
 $force_https = false;
 
 // database
-$db_use = true;
 $db_type = DatabaseType::MYSQL;
 $db_config = array(
 		'host' => 'localhost',
